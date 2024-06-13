@@ -1,0 +1,45 @@
+﻿<Window x:Class="Client_Market.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewmodels="clr-namespace:Client_Market.ViewModels"
+        xmlns:views="clr-namespace:Client_Market.Views"
+        xmlns:local="clr-namespace:Client_Market"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode = "NoResize"
+        Height="546" Width="989">
+    <Grid MouseDown="Grid_MouseDown">
+        <materialDesign:TransitioningContent x:Name="TrainsitionigContentSlide" OpeningEffect="{materialDesign:TransitionEffect FadeIn}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="28*"/>
+                    <RowDefinition Height="517*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.RowSpan="3">
+                    <Image x:Name="img" Source="C:\Users\Babek\source\repos\Client_Market\Client_Market\Image/MainFone.jpg" Stretch="UniformToFill"></Image>
+                    <Rectangle Fill="#FF333337" Height="28" Stroke="Black" VerticalAlignment="Top"/>
+                    <Rectangle Fill="#453F3F46" Margin="0,27,0,0" Stroke="Black"/>
+                    <Label Content="Coffee Market" HorizontalAlignment="Left" Margin="0,-3,0,0" VerticalAlignment="Top" Width="130" Foreground="#FFDEDEDE" FontWeight="Bold" FontStyle="Italic" FontSize="18" Height="33"/>
+                    <views:AuthView Margin="0,28,0,0"/>
+                </Grid>
+                <Grid Grid.RowSpan="3">
+                    <Button x:Name="offButton" Width="27" Background="{x:Null}" BorderBrush="Black" Padding="0" Foreground="LightGray" Margin="0,0,0,518" HorizontalAlignment="Right" Height="Auto" Click="OffButton_Click">
+                        <materialDesign:PackIcon Kind="Power" Height="24" Width="24"/>
+                    </Button>
+                    <Button x:Name="rollButton" Width="27" Background="{x:Null}" BorderBrush="Black" Padding="0" Foreground="LightGray" Margin="0,0,26,518" HorizontalAlignment="Right" Height="Auto" Click="RollButton_Click">
+                        <materialDesign:PackIcon Kind="Minus" Height="24" Width="24"/>
+                    </Button>
+                    <Button x:Name="supportButton" Width="27" Background="{x:Null}" BorderBrush="Black" Padding="0" Foreground="LightGray" Margin="0,0,52,518" HorizontalAlignment="Right" Height="Auto">
+                        <materialDesign:PackIcon Kind="FaceAgent" Height="24" Width="24"/>
+                    </Button>
+                </Grid>
+            </Grid>
+        </materialDesign:TransitioningContent>
+    </Grid>
+</Window>
